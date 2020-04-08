@@ -11,22 +11,31 @@
 </head>
 
 <body>
-    <main>
-        <nav>
+    <main class='main'>
+        <nav class='navbar'>
             <ul class='navbar-list'>
                 <li>
                     <a href='#'>Home</a>
                 </li>
                 <li>
-                    <a href='#'>Open Sidebar</a>
+                    <!-- Convert the link to a button, and use custom CSS attributes for scalability -->
+                    <button class='button' data-js='open-sidebar' data-theme='button'>Open Sidebar</a>
                 </li>
                 <li>
-                    <a href='#'>Change Theme</a>
+                    <button class='button' data-js='open-sidebar' data-theme='button'>Change Theme</a>
                 </li>
             </ul>
         </nav>
+        <aside class='sidebar' data-js='sidebar'>
+            <ul class='sidebar__ul'>
+                <li>Sidebar Option 1</li>
+                <li>Sidebar Option 2</li>
+                <li>Sidebar Option 3</li>
+            </ul>
+            <div class='sidebar__click-catcher' data-js='sidebar-click-catcher'></div>
+        </aside>
         <h1>Todos</h1>
-        <ul id='list'>
+        <ul class='list' data-js='list'>
             <!-- Unless using SPAs, default should be server-side rendering of data on server -->
             <% todos.forEach(function(todo) { %>
                 <li>

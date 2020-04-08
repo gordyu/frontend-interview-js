@@ -1,5 +1,4 @@
-/* Reset to avoid browser defaults, which are all different
-*/ 
+/* Reset to avoid browser defaults, which are all different */ 
 * {
     padding: 0;
     margin: 0;
@@ -11,13 +10,38 @@ body {
     color: white;
 }
 
-main {
+/* Default blue outline does not contrast well against blue background */
+:focus {
+    outline: 2px solid orange;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* Use BEM CSS architecture */
+.body--themed {
+    color: gold;
+}
+
+.button {
+    background: none;
+    color: white;
+    border: none;
+}
+
+/* Use attribute selector [square brackets] to select all elements with that attribute */
+.body--themed [data-theme='button'] {
+    color: gold;
+}
+
+.main {
     padding: 8px;
     max-width: 1024px;
     margin: 0 auto;
 }
 
-nav {
+.nav {
     max-width: 400px;
     margin: 0 auto;
 }
@@ -38,4 +62,36 @@ a {
 
 a:hover {
     color: crimson;
+}
+
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Use GPU for effects */
+    transform: translate3d(-100%, 0, 0);
+    transition: left 0.3s ease-in-out;
+    display: flex;
+}
+
+.sidebar--open {
+    transform: translate3d(-100%, 0, 0) !important;
+}
+
+.sidebar__ul,
+.sidebar__click-catcher {
+    flex: 1 1 auto;
+}
+
+.sidebar__ul {
+    background: rgba(111, 111, 111, 1);
+    padding: 8px;
+}
+
+@media screen and (min-width: 768px) {
+    .sidebar__ul {
+        flex: 0 0 200px;
+    }
 }

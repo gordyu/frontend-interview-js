@@ -12,4 +12,3 @@
    a. button
    b. body
    c. h1
-3. Add a webpack.prod.config.js file with production configs
