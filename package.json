@@ -1,0 +1,17 @@
+{
+  "name": "frontend-interview",
+  "version": "1.0.0",
+  "description": "1. Add basic responsive styles 2. Get the todos from the server. Show them on the page. 3. Add an input field to the todo list 4. Add todos without refreshing the page",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Gordon Yu",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
+}

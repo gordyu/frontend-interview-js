@@ -1,0 +1,41 @@
+/* Reset to avoid browser defaults, which are all different
+*/ 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: steelblue;
+    color: white;
+}
+
+main {
+    padding: 8px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+nav {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.navbar-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: crimson;
+}
